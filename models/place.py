@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Creates a place class"""
+"""Creates place class"""
 
 from models.base_model import BaseModel
 

@@ -9,7 +9,7 @@ from models import storage
 class BaseModel:
 
     """
-    Class from which all other classes will 
+    Class from which all other classes will
     inherit attributes and operations
     """
 
@@ -51,7 +51,7 @@ class BaseModel:
         storage.save()
 
     def to_dict(self):
-        """returns a dictionary containing all keys/values of __dict__"""
+        """returns a dictionary containing all keys-values of __dict__"""
 
         class_dict = self.__dict__.copy()
         class_dict["__class__"] = type(self).__name__
