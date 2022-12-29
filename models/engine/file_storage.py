@@ -23,9 +23,9 @@ class FileStorage:
     def save(self):
         """ serializing to json"""
         with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
-            d = {key: value.to_dict() for key, value in FileStorage.__objects.items()}
+            d = {k: v.to_dict() for k, v in FileStorage.__objects.items()}
             json.dump(d, f)
-    
+
     def reload(self):
         """Retrieves object data"""
         if not os.path.isfile(FileStorage.__file_path):
